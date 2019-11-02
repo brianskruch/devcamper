@@ -35,7 +35,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}/api/v1/bootcamps/1",
+							"raw": "{{URL}}/api/v1/bootcamps/5dbd83ad6df09718b00ce842",
 							"host": [
 								"{{URL}}"
 							],
@@ -43,7 +43,7 @@
 								"api",
 								"v1",
 								"bootcamps",
-								"1"
+								"5dbd83ad6df09718b00ce842"
 							]
 						},
 						"description": "Get single bootcamp by id"
@@ -70,7 +70,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\t\"name\": \"Devcentral Bootcamp\",\n\t\t\"description\": \"Is coding your passion? Codemasters will give you the skills and the tools to become the best developer possible. We specialize in front end and full stack web development\",\n\t\t\"website\": \"https://devcentral.com\",\n\t\t\"phone\": \"(444) 444-4444\",\n\t\t\"email\": \"enroll@devcentral.com\",\n\t\t\"address\": \"45 Upper College Rd Kingston RI 02881\",\n\t\t\"careers\": [\n\t\t\t\"Mobile Development\",\n\t\t\t\"Web Development\",\n\t\t\t\"Data Science\",\n\t\t\t\"Business\"\n\t\t],\n\t\t\"housing\": false,\n\t\t\"jobAssistance\": true,\n\t\t\"jobGuarantee\": true,\n\t\t\"acceptGi\": true\n}"
+							"raw": "{\n\t        \"name\": \"TEST Bootcamp 4\",\n            \"description\": \"Devworks is a full stack JavaScript Bootcamp located in the heart of Boston that focuses on the technologies you need to get a high paying job as a web developer\",\n            \"website\": \"https://devworks.com\",\n            \"phone\": \"(111) 111-1111\",\n            \"email\": \"enroll@devworks.com\",\n            \"address\": \"233 Bay State Rd Boston MA 02215\",\n            \"careers\": [\n                \"Web Development\",\n                \"UI/UX\"\n            ],\n            \"photo\": \"no-photo.jpg\",\n            \"housing\": false,\n            \"jobAssistance\": true,\n            \"jobGuarantee\": false,\n            \"acceptGi\": true\n}"
 						},
 						"url": {
 							"raw": "{{URL}}/api/v1/bootcamps",
@@ -91,9 +91,20 @@
 					"name": "Update Bootcamp",
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"careers\":[\"Web Development\", \"UI/UX\", \"Data Science\"]\n}"
+						},
 						"url": {
-							"raw": "{{URL}}/api/v1/bootcamps/1",
+							"raw": "{{URL}}/api/v1/bootcamps/5dbd83ad6df09718b00ce842",
 							"host": [
 								"{{URL}}"
 							],
@@ -101,7 +112,7 @@
 								"api",
 								"v1",
 								"bootcamps",
-								"1"
+								"5dbd83ad6df09718b00ce842"
 							]
 						},
 						"description": "Update single bootcamp by id in database."
@@ -114,7 +125,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}/api/v1/bootcamps/1",
+							"raw": "{{URL}}/api/v1/bootcamps/5dbdd22711fa9f5cd0e0a019",
 							"host": [
 								"{{URL}}"
 							],
@@ -122,7 +133,7 @@
 								"api",
 								"v1",
 								"bootcamps",
-								"1"
+								"5dbdd22711fa9f5cd0e0a019"
 							]
 						},
 						"description": "Delete bootcamp from database"
