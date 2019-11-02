@@ -1,0 +1,241 @@
+{
+	"info": {
+		"_postman_id": "df07a0c4-21f9-4a3b-ad2a-58ced9216b5e",
+		"name": "DevCamper API",
+		"description": "Backend API for the DevCamper application to manage bootcamps, courses, reviews, users, and authentication.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Bootcamps",
+			"item": [
+				{
+					"name": "Get All Bootcamps",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/bootcamps",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps"
+							]
+						},
+						"description": "Fetch all bootcamps from database. This includes pagination, filtering, etc."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Bootcamp",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/bootcamps/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps",
+								"1"
+							]
+						},
+						"description": "Get single bootcamp by id"
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Bootcamp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\t\"name\": \"Devcentral Bootcamp\",\n\t\t\"description\": \"Is coding your passion? Codemasters will give you the skills and the tools to become the best developer possible. We specialize in front end and full stack web development\",\n\t\t\"website\": \"https://devcentral.com\",\n\t\t\"phone\": \"(444) 444-4444\",\n\t\t\"email\": \"enroll@devcentral.com\",\n\t\t\"address\": \"45 Upper College Rd Kingston RI 02881\",\n\t\t\"careers\": [\n\t\t\t\"Mobile Development\",\n\t\t\t\"Web Development\",\n\t\t\t\"Data Science\",\n\t\t\t\"Business\"\n\t\t],\n\t\t\"housing\": false,\n\t\t\"jobAssistance\": true,\n\t\t\"jobGuarantee\": true,\n\t\t\"acceptGi\": true\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/bootcamps",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps"
+							]
+						},
+						"description": "Add new bootcamp to database. Must be authenticated and must be publicher or admin."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Bootcamp",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/bootcamps/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps",
+								"1"
+							]
+						},
+						"description": "Update single bootcamp by id in database."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Bootcamp",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/bootcamps/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps",
+								"1"
+							]
+						},
+						"description": "Delete bootcamp from database"
+					},
+					"response": []
+				}
+			],
+			"description": "Bootcamps CRUD functionality.",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "temp1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "temp2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 4,\n\t\t\"text\": \"Todo Four\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "temp3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/bootcamps/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"bootcamps",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lesson 3-17",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "3b03ee2d-d71a-40aa-b291-cd2d720f7e55",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "3a801da5-6558-4d30-9920-fcf610e83375",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
