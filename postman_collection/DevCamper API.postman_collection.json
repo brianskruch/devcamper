@@ -125,7 +125,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}/api/v1/bootcamps/5dbdd22711fa9f5cd0e0a019",
+							"raw": "{{URL}}/api/v1/bootcamps/5dbf7ac59983841920e6d6e6",
 							"host": [
 								"{{URL}}"
 							],
@@ -133,10 +133,33 @@
 								"api",
 								"v1",
 								"bootcamps",
-								"5dbdd22711fa9f5cd0e0a019"
+								"5dbf7ac59983841920e6d6e6"
 							]
 						},
 						"description": "Delete bootcamp from database"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Bootcamps Within Radius",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/bootcamps/radius/02118/10",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps",
+								"radius",
+								"02118",
+								"10"
+							]
+						},
+						"description": "Get bootcamps within a radius of a specific zipcode"
 					},
 					"response": []
 				}
