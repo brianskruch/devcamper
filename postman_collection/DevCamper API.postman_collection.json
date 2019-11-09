@@ -15,7 +15,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}/api/v1/bootcamps",
+							"raw": "{{URL}}/api/v1/bootcamps?select=name,description,housing&sort=-name",
 							"host": [
 								"{{URL}}"
 							],
@@ -23,6 +23,21 @@
 								"api",
 								"v1",
 								"bootcamps"
+							],
+							"query": [
+								{
+									"key": "select",
+									"value": "name,description,housing"
+								},
+								{
+									"key": "housing",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "-name"
+								}
 							]
 						},
 						"description": "Fetch all bootcamps from database. This includes pagination, filtering, etc."
