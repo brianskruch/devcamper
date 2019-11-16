@@ -143,7 +143,6 @@ BootcampSchema.virtual('courses', {
   localField: '_id',
   foreignField: 'bootcamp',
   justOne: false
-}
-);
+}); 
 
 module.exports = mongoose.model('Bootcamp', BootcampSchema);
