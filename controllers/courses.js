@@ -55,7 +55,7 @@ exports.getCourse = asyncHandler(async (req, res, next) => {
 // @desc  Add a course
 // @route POST /api/v1/bootcamps/:bootcampId/courses
 // @access  Private
-/*
+
 exports.addCourse = asyncHandler(async (req, res, next) => {
   req.body.bootcamp = req.params.bootcampId;
 
@@ -71,4 +71,4 @@ exports.addCourse = asyncHandler(async (req, res, next) => {
     success: true,
     data: course
   });
-}); */
+}); 
