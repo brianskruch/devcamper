@@ -50,7 +50,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}/api/v1/bootcamps/5d713a66ec8f2b88b8f830b8",
+							"raw": "{{URL}}/api/v1/bootcamps/5d725a1b7b292f5f8ceff788",
 							"host": [
 								"{{URL}}"
 							],
@@ -58,7 +58,7 @@
 								"api",
 								"v1",
 								"bootcamps",
-								"5d713a66ec8f2b88b8f830b8"
+								"5d725a1b7b292f5f8ceff788"
 							]
 						},
 						"description": "Get single bootcamp by id"
@@ -177,6 +177,45 @@
 						"description": "Get bootcamps within a radius of a specific zipcode"
 					},
 					"response": []
+				},
+				{
+					"name": "Upload Bootcamp Photo",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Customer_Files_55/TraversyMedia/devcamper-project-resources/photo_download/bootcamp.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/bootcamps/5d725a1b7b292f5f8ceff788/photo",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps",
+								"5d725a1b7b292f5f8ceff788",
+								"photo"
+							]
+						},
+						"description": "Upload a photo for a specific bootcamp"
+					},
+					"response": []
 				}
 			],
 			"description": "Bootcamps CRUD functionality.",
@@ -275,7 +314,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}/api/v1/courses",
+							"raw": "{{URL}}/api/v1/courses?select=title&page=2&limit=2",
 							"host": [
 								"{{URL}}"
 							],
@@ -286,13 +325,171 @@
 							],
 							"query": [
 								{
+									"key": "select",
+									"value": "title"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "housing",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								}
+							]
+						},
+						"description": "Get All Courses"
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Course",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\t\"title\": \"Full Stack Web Development 3\",\n\t\t\"description\": \"In this course you will learn full stack web development, first learning all about the frontend with HTML/CSS/JS/Vue and then the backend with Node.js/Express/MongoDB\",\n\t\t\"weeks\": 12,\n\t\t\"tuition\": 5000,\n\t\t\"minimumSkill\": \"intermediate\",\n\t\t\"scholarhipsAvailable\": true\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/bootcamps/5d725a1b7b292f5f8ceff788/courses",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps",
+								"5d725a1b7b292f5f8ceff788",
+								"courses"
+							],
+							"query": [
+								{
 									"key": "housing",
 									"value": "true",
 									"disabled": true
 								}
 							]
 						},
-						"description": "Get All Courses"
+						"description": "Create new course within an existing Bootcamp"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tuition\": 13000,\n    \"minimumSkill\": \"advanced\"\t\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/courses/5d725a4a7b292f5f8ceff789",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"courses",
+								"5d725a4a7b292f5f8ceff789"
+							],
+							"query": [
+								{
+									"key": "housing",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Update a single course with the id input as part of the URL"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Course",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/courses/5d725a4a7b292f5f8ceff789",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"courses",
+								"5d725a4a7b292f5f8ceff789"
+							],
+							"query": [
+								{
+									"key": "housing",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Delete a course by inputting the id"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tuition\": 13000,\n    \"minimumSkill\": \"advanced\"\t\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/courses/5d725a4a7b292f5f8ceff789",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"courses",
+								"5d725a4a7b292f5f8ceff789"
+							],
+							"query": [
+								{
+									"key": "housing",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Update a course with the id in the url and files to update in the body"
 					},
 					"response": []
 				}
