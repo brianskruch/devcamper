@@ -81,11 +81,16 @@
 								"value": "application/json",
 								"description": "JSON Type",
 								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkZDNkN2FmYTdhMjJlMzk0NGNjYWFmMSIsImlhdCI6MTU3NDMwMDM0NCwiZXhwIjoxNTc2ODkyMzQ0fQ.0ljqocEf3kvdRrfNASGXC1iKp5GxQXlVkxwa_aOKYQ4",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t        \"name\": \"TEST Bootcamp 4\",\n            \"description\": \"Devworks is a full stack JavaScript Bootcamp located in the heart of Boston that focuses on the technologies you need to get a high paying job as a web developer\",\n            \"website\": \"https://devworks.com\",\n            \"phone\": \"(111) 111-1111\",\n            \"email\": \"enroll@devworks.com\",\n            \"address\": \"233 Bay State Rd Boston MA 02215\",\n            \"careers\": [\n                \"Web Development\",\n                \"UI/UX\"\n            ],\n            \"photo\": \"no-photo.jpg\",\n            \"housing\": false,\n            \"jobAssistance\": true,\n            \"jobGuarantee\": false,\n            \"acceptGi\": true\n}"
+							"raw": "{\n\t        \"name\": \"TEST Bootcamp 5\",\n            \"description\": \"Devworks is a full stack JavaScript Bootcamp located in the heart of Boston that focuses on the technologies you need to get a high paying job as a web developer\",\n            \"website\": \"https://devworks.com\",\n            \"phone\": \"(111) 111-1111\",\n            \"email\": \"enroll@devworks.com\",\n            \"address\": \"233 Bay State Rd Boston MA 02215\",\n            \"careers\": [\n                \"Web Development\",\n                \"UI/UX\"\n            ],\n            \"photo\": \"no-photo.jpg\",\n            \"housing\": false,\n            \"jobAssistance\": true,\n            \"jobGuarantee\": false,\n            \"acceptGi\": true\n}"
 						},
 						"url": {
 							"raw": "{{URL}}/api/v1/bootcamps",
@@ -492,6 +497,132 @@
 						"description": "Update a course with the id in the url and files to update in the body"
 					},
 					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register a new user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Brian Skruch\",\n\t\"email\": \"brianskruch@gmail.com\",\n\t\"password\": \"123456\",\n\t\"role\": \"publisher\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/auth/register",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						},
+						"description": "Register a new user with email, password."
+					},
+					"response": []
+				},
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"John Doe\",\n\t\"email\": \"johndoe@gmail.com\",\n\t\"password\": \"123456\",\n\t\"role\": \"publisher\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/auth/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						},
+						"description": "User logs in with email and password"
+					},
+					"response": []
+				},
+				{
+					"name": "Get current User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkZDVmNjQzYjRlOWQxMjMyMDRmOTBiMCIsImlhdCI6MTU3NDMwMzI5OSwiZXhwIjoxNTc2ODk1Mjk5fQ.voQAqAAhJJIu5ZDf_4jEeQiysI4xf5RncDfHU3OswKQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/v1/auth/me",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"me"
+							]
+						},
+						"description": "Get the current user that is logged in"
+					},
+					"response": []
+				}
+			],
+			"description": "This contains rest calls realted to authentication including register, login, and reset password.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "68c5e698-b334-482f-912c-da6a378ba7a3",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "f2dabf00-1b82-47dc-9c12-fc5eef86bb14",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
 			],
 			"protocolProfileBehavior": {}
