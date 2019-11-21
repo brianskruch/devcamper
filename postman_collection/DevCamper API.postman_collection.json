@@ -68,6 +68,16 @@
 				{
 					"name": "Create New Bootcamp",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -90,7 +100,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t        \"name\": \"TEST Bootcamp 5\",\n            \"description\": \"Devworks is a full stack JavaScript Bootcamp located in the heart of Boston that focuses on the technologies you need to get a high paying job as a web developer\",\n            \"website\": \"https://devworks.com\",\n            \"phone\": \"(111) 111-1111\",\n            \"email\": \"enroll@devworks.com\",\n            \"address\": \"233 Bay State Rd Boston MA 02215\",\n            \"careers\": [\n                \"Web Development\",\n                \"UI/UX\"\n            ],\n            \"photo\": \"no-photo.jpg\",\n            \"housing\": false,\n            \"jobAssistance\": true,\n            \"jobGuarantee\": false,\n            \"acceptGi\": true\n}"
+							"raw": "{\n\t        \"name\": \"TEST Bootcamp 6\",\n            \"description\": \"Devworks is a full stack JavaScript Bootcamp located in the heart of Boston that focuses on the technologies you need to get a high paying job as a web developer\",\n            \"website\": \"https://devworks.com\",\n            \"phone\": \"(111) 111-1111\",\n            \"email\": \"enroll@devworks.com\",\n            \"address\": \"233 Bay State Rd Boston MA 02215\",\n            \"careers\": [\n                \"Web Development\",\n                \"UI/UX\"\n            ],\n            \"photo\": \"no-photo.jpg\",\n            \"housing\": false,\n            \"jobAssistance\": true,\n            \"jobGuarantee\": false,\n            \"acceptGi\": true\n}"
 						},
 						"url": {
 							"raw": "{{URL}}/api/v1/bootcamps",
@@ -110,6 +120,16 @@
 				{
 					"name": "Update Bootcamp",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [
 							{
@@ -142,10 +162,20 @@
 				{
 					"name": "Delete Bootcamp",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}/api/v1/bootcamps/5d725a1b7b292f5f8ceff788",
+							"raw": "{{URL}}/api/v1/bootcamps/5dd67dedc182ef34c49b1695",
 							"host": [
 								"{{URL}}"
 							],
@@ -153,7 +183,7 @@
 								"api",
 								"v1",
 								"bootcamps",
-								"5d725a1b7b292f5f8ceff788"
+								"5dd67dedc182ef34c49b1695"
 							]
 						},
 						"description": "Delete bootcamp from database"
@@ -186,6 +216,16 @@
 				{
 					"name": "Upload Bootcamp Photo",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [
 							{
@@ -355,6 +395,16 @@
 				{
 					"name": "Create New Course",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -395,6 +445,16 @@
 				{
 					"name": "Update Course",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [
 							{
@@ -434,6 +494,16 @@
 				{
 					"name": "Delete Course",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -458,45 +528,6 @@
 						"description": "Delete a course by inputting the id"
 					},
 					"response": []
-				},
-				{
-					"name": "Update Course",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": "JSON Type",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"tuition\": 13000,\n    \"minimumSkill\": \"advanced\"\t\n}"
-						},
-						"url": {
-							"raw": "{{URL}}/api/v1/courses/5d725a4a7b292f5f8ceff789",
-							"host": [
-								"{{URL}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"courses",
-								"5d725a4a7b292f5f8ceff789"
-							],
-							"query": [
-								{
-									"key": "housing",
-									"value": "true",
-									"disabled": true
-								}
-							]
-						},
-						"description": "Update a course with the id in the url and files to update in the body"
-					},
-					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -506,6 +537,18 @@
 			"item": [
 				{
 					"name": "Register a new user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a8b3fd1f-bd53-40ca-8c96-232c9ee6a940",
+								"exec": [
+									"pm.environment.set(\"TOKEN\", pm.response.json().token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [
@@ -538,6 +581,18 @@
 				},
 				{
 					"name": "User Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bbb8d563-3a4b-4e24-973a-ea928edd4dde",
+								"exec": [
+									"pm.environment.set(\"TOKEN\", pm.response.json().token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [
@@ -550,7 +605,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"John Doe\",\n\t\"email\": \"johndoe@gmail.com\",\n\t\"password\": \"123456\",\n\t\"role\": \"publisher\"\n}"
+							"raw": "{\n\t\"email\": \"brianskruch@gmail.com\",\n\t\"password\": \"123456\"\n}"
 						},
 						"url": {
 							"raw": "{{URL}}/api/v1/auth/login",
@@ -571,6 +626,16 @@
 				{
 					"name": "Get current User",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -582,7 +647,8 @@
 							{
 								"key": "Authorization",
 								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkZDVmNjQzYjRlOWQxMjMyMDRmOTBiMCIsImlhdCI6MTU3NDMwMzI5OSwiZXhwIjoxNTc2ODk1Mjk5fQ.voQAqAAhJJIu5ZDf_4jEeQiysI4xf5RncDfHU3OswKQ",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"url": {
