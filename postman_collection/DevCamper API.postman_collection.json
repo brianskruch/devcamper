@@ -100,7 +100,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t        \"name\": \"TEST Bootcamp 6\",\n            \"description\": \"Devworks is a full stack JavaScript Bootcamp located in the heart of Boston that focuses on the technologies you need to get a high paying job as a web developer\",\n            \"website\": \"https://devworks.com\",\n            \"phone\": \"(111) 111-1111\",\n            \"email\": \"enroll@devworks.com\",\n            \"address\": \"233 Bay State Rd Boston MA 02215\",\n            \"careers\": [\n                \"Web Development\",\n                \"UI/UX\"\n            ],\n            \"photo\": \"no-photo.jpg\",\n            \"housing\": false,\n            \"jobAssistance\": true,\n            \"jobGuarantee\": false,\n            \"acceptGi\": true\n}"
+							"raw": "{\n\t        \"name\": \"Modern Tech Bootcamp 1\",\n            \"description\": \"Devworks is a full stack JavaScript Bootcamp located in the heart of Boston that focuses on the technologies you need to get a high paying job as a web developer\",\n            \"website\": \"https://devworks.com\",\n            \"phone\": \"(111) 111-1111\",\n            \"email\": \"enroll@devworks.com\",\n            \"address\": \"233 Bay State Rd Boston MA 02215\",\n            \"careers\": [\n                \"Web Development\",\n                \"UI/UX\"\n            ],\n            \"photo\": \"no-photo.jpg\",\n            \"housing\": false,\n            \"jobAssistance\": true,\n            \"jobGuarantee\": false,\n            \"acceptGi\": true\n}"
 						},
 						"url": {
 							"raw": "{{URL}}/api/v1/bootcamps",
@@ -141,10 +141,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"careers\":[\"Web Development\", \"UI/UX\", \"Data Science\"]\n}"
+							"raw": "{\n\t\"housing\":false\n}"
 						},
 						"url": {
-							"raw": "{{URL}}/api/v1/bootcamps/5dbd83ad6df09718b00ce842",
+							"raw": "{{URL}}/api/v1/bootcamps/5dd87ef09d320e3918517a86",
 							"host": [
 								"{{URL}}"
 							],
@@ -152,7 +152,7 @@
 								"api",
 								"v1",
 								"bootcamps",
-								"5dbd83ad6df09718b00ce842"
+								"5dd87ef09d320e3918517a86"
 							]
 						},
 						"description": "Update single bootcamp by id in database."
@@ -175,7 +175,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}/api/v1/bootcamps/5dd67dedc182ef34c49b1695",
+							"raw": "{{URL}}/api/v1/bootcamps/5dd87ef09d320e3918517a86",
 							"host": [
 								"{{URL}}"
 							],
@@ -183,7 +183,7 @@
 								"api",
 								"v1",
 								"bootcamps",
-								"5dd67dedc182ef34c49b1695"
+								"5dd87ef09d320e3918517a86"
 							]
 						},
 						"description": "Delete bootcamp from database"
@@ -259,6 +259,40 @@
 							]
 						},
 						"description": "Upload a photo for a specific bootcamp"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Bootcamps w/ parameters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/bootcamps?select=name,description,housing&sort=-name",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps"
+							],
+							"query": [
+								{
+									"key": "select",
+									"value": "name,description,housing"
+								},
+								{
+									"key": "housing",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "-name"
+								}
+							]
+						}
 					},
 					"response": []
 				}
@@ -416,10 +450,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\t\"title\": \"Full Stack Web Development 3\",\n\t\t\"description\": \"In this course you will learn full stack web development, first learning all about the frontend with HTML/CSS/JS/Vue and then the backend with Node.js/Express/MongoDB\",\n\t\t\"weeks\": 12,\n\t\t\"tuition\": 5000,\n\t\t\"minimumSkill\": \"intermediate\",\n\t\t\"scholarhipsAvailable\": true\n}"
+							"raw": "{\n\t\t\"title\": \"Full Stack Web Development 4\",\n\t\t\"description\": \"In this course you will learn full stack web development, first learning all about the frontend with HTML/CSS/JS/Vue and then the backend with Node.js/Express/MongoDB\",\n\t\t\"weeks\": 12,\n\t\t\"tuition\": 5000,\n\t\t\"minimumSkill\": \"intermediate\",\n\t\t\"scholarhipsAvailable\": true\n}"
 						},
 						"url": {
-							"raw": "{{URL}}/api/v1/bootcamps/5d725a1b7b292f5f8ceff788/courses",
+							"raw": "{{URL}}/api/v1/bootcamps/5dd886abdfca0a3458f6c7ed/courses",
 							"host": [
 								"{{URL}}"
 							],
@@ -427,7 +461,7 @@
 								"api",
 								"v1",
 								"bootcamps",
-								"5d725a1b7b292f5f8ceff788",
+								"5dd886abdfca0a3458f6c7ed",
 								"courses"
 							],
 							"query": [
@@ -469,7 +503,7 @@
 							"raw": "{\n    \"tuition\": 13000,\n    \"minimumSkill\": \"advanced\"\t\n}"
 						},
 						"url": {
-							"raw": "{{URL}}/api/v1/courses/5d725a4a7b292f5f8ceff789",
+							"raw": "{{URL}}/api/v1/courses/5dd886ecdfca0a3458f6c7ee",
 							"host": [
 								"{{URL}}"
 							],
@@ -477,7 +511,7 @@
 								"api",
 								"v1",
 								"courses",
-								"5d725a4a7b292f5f8ceff789"
+								"5dd886ecdfca0a3458f6c7ee"
 							],
 							"query": [
 								{
@@ -507,7 +541,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}/api/v1/courses/5d725a4a7b292f5f8ceff789",
+							"raw": "{{URL}}/api/v1/courses/5dd886ecdfca0a3458f6c7ee",
 							"host": [
 								"{{URL}}"
 							],
@@ -515,7 +549,7 @@
 								"api",
 								"v1",
 								"courses",
-								"5d725a4a7b292f5f8ceff789"
+								"5dd886ecdfca0a3458f6c7ee"
 							],
 							"query": [
 								{
@@ -561,7 +595,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"Brian Skruch\",\n\t\"email\": \"brianskruch@gmail.com\",\n\t\"password\": \"123456\",\n\t\"role\": \"publisher\"\n}"
+							"raw": "{\n\t\"name\": \"Kevin Smith\",\n\t\"email\": \"Kevin@gmail.com\",\n\t\"password\": \"123456\",\n\t\"role\": \"publisher\"\n}"
 						},
 						"url": {
 							"raw": "{{URL}}/api/v1/auth/register",
@@ -605,7 +639,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"email\": \"brianskruch@gmail.com\",\n\t\"password\": \"123456\"\n}"
+							"raw": "{\n\t\"email\": \"John@gmail.com\",\n\t\"password\": \"123456\"\n}"
 						},
 						"url": {
 							"raw": "{{URL}}/api/v1/auth/login",
