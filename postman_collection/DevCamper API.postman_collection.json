@@ -595,7 +595,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"Kevin Smith\",\n\t\"email\": \"Kevin@gmail.com\",\n\t\"password\": \"123456\",\n\t\"role\": \"publisher\"\n}"
+							"raw": "{\n\t\"name\": \"Test User\",\n\t\"email\": \"test@gmail.com\",\n\t\"password\": \"123456\",\n\t\"role\": \"publisher\"\n}"
 						},
 						"url": {
 							"raw": "{{URL}}/api/v1/auth/register",
@@ -1133,6 +1133,49 @@
 							]
 						},
 						"description": "Retreive a review from database by id and populate Bootcamp name and description"
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Review for Bootcamp",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\":\"Nice bootcamp\",\n\t\"text\":\"I learned a lot\",\n\t\"rating\":8\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/bootcamps/5d725a1b7b292f5f8ceff788/reviews",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps",
+								"5d725a1b7b292f5f8ceff788",
+								"reviews"
+							]
+						},
+						"description": "Add review for a specific bootcamp"
 					},
 					"response": []
 				}
