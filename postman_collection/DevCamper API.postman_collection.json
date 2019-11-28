@@ -1160,7 +1160,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"title\": \"Great job 2\",\n\t\"text\": \"I learned a lot\",\n\t\"rating\": 6\n}"
+							"raw": "{\n\t\"title\": \"Great job 4\",\n\t\"text\": \"I learned a lot\",\n\t\"rating\": 9\n}"
 						},
 						"url": {
 							"raw": "{{URL}}/api/v1/bootcamps/5ddfda97dacd011a947c3bfc/reviews",
@@ -1178,91 +1178,87 @@
 						"description": "Add review for a specific bootcamp"
 					},
 					"response": []
+				},
+				{
+					"name": "Update Review",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Had fun\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/reviews/5ddfdbabdacd011a947c3c00",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reviews",
+								"5ddfdbabdacd011a947c3c00"
+							]
+						},
+						"description": "Update review with id as input"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Review",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/reviews/5ddfe3556af77128d85391e9",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reviews",
+								"5ddfe3556af77128d85391e9"
+							]
+						},
+						"description": "Delete a review with the id number as the input"
+					},
+					"response": []
 				}
 			],
 			"description": "Manage course reviews",
 			"protocolProfileBehavior": {}
-		},
-		{
-			"name": "temp1",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:5000/products",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"products"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "temp2",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"id\": 4,\n\t\t\"text\": \"Todo Four\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:5000/todos",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"todos"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "temp3",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:5000/api/v1/bootcamps/2",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"v1",
-						"bootcamps",
-						"2"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "lesson 3-17",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": ""
-				}
-			},
-			"response": []
 		}
 	],
 	"event": [
