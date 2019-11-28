@@ -595,7 +595,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"Test User\",\n\t\"email\": \"test@gmail.com\",\n\t\"password\": \"123456\",\n\t\"role\": \"publisher\"\n}"
+							"raw": "{\n\t\"name\": \"Bill Jennings\",\n\t\"email\": \"bill@gmail.com\",\n\t\"password\": \"123456\",\n\t\"role\": \"user\"\n}"
 						},
 						"url": {
 							"raw": "{{URL}}/api/v1/auth/register",
@@ -639,7 +639,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"email\": \"admin@gmail.com\",\n\t\"password\": \"123456\"\n}"
+							"raw": "{\n\t\"email\": \"bill@gmail.com\",\n\t\"password\": \"123456\"\n}"
 						},
 						"url": {
 							"raw": "{{URL}}/api/v1/auth/login",
@@ -1160,10 +1160,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"title\":\"Nice bootcamp\",\n\t\"text\":\"I learned a lot\",\n\t\"rating\":8\n}"
+							"raw": "{\n\t\"title\": \"Great job 2\",\n\t\"text\": \"I learned a lot\",\n\t\"rating\": 6\n}"
 						},
 						"url": {
-							"raw": "{{URL}}/api/v1/bootcamps/5d725a1b7b292f5f8ceff788/reviews",
+							"raw": "{{URL}}/api/v1/bootcamps/5ddfda97dacd011a947c3bfc/reviews",
 							"host": [
 								"{{URL}}"
 							],
@@ -1171,7 +1171,7 @@
 								"api",
 								"v1",
 								"bootcamps",
-								"5d725a1b7b292f5f8ceff788",
+								"5ddfda97dacd011a947c3bfc",
 								"reviews"
 							]
 						},
