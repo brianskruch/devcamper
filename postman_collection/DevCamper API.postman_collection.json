@@ -175,7 +175,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}/api/v1/bootcamps/5dd87ef09d320e3918517a86",
+							"raw": "{{URL}}/api/v1/bootcamps/5de1062a855d3d257c117589",
 							"host": [
 								"{{URL}}"
 							],
@@ -183,7 +183,7 @@
 								"api",
 								"v1",
 								"bootcamps",
-								"5dd87ef09d320e3918517a86"
+								"5de1062a855d3d257c117589"
 							]
 						},
 						"description": "Delete bootcamp from database"
@@ -639,7 +639,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"email\": \"john@gmail.com\",\n\t\"password\": \"123456\"\n}"
+							"raw": "{\n\t\"email\": \"publisher@gmail.com\",\n\t\"password\": \"123456\"\n}"
 						},
 						"url": {
 							"raw": "{{URL}}/api/v1/auth/login",
